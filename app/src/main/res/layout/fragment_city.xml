@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/purple_200">
+
+    <LinearLayout
+        android:id="@+id/locLyt"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/location"/>
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempCountry"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/imgWeather"
+        android:layout_below="@id/locLyt"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descrWeather"
+        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/imgWeather"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tempLyt"
+        android:layout_below="@id/descrWeather"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:id="@+id/temp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_alignStart="@id/temp"
+            android:layout_alignEnd="@id/temp"
+            android:id="@+id/lineTxt"
+            android:background="@color/white"
+            android:layout_below="@id/temp"
+            android:layout_marginTop="0dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/tempIcon"
+        android:src="@drawable/temperature"
+        android:layout_below="@id/tempLyt"
+        android:layout_marginTop="10dp"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempMin"
+        android:layout_toEndOf="@id/tempIcon"
+        android:layout_alignTop="@id/tempIcon"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempMax"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/tempMin"
+        android:layout_alignBaseline="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/windIcon"
+        android:src="@drawable/wind"
+        android:layout_below="@id/tempIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/windSpeed"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/windIcon"
+        android:layout_alignTop="@id/windIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/windDeg"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/windSpeed"
+        android:layout_alignBaseline="@id/windSpeed"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/humidityIcon"
+        android:src="@drawable/humidity"
+        android:layout_below="@id/windIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidity"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/humidityIcon"
+        android:layout_alignTop="@id/humidityIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+    <!-- End Humidity Data -->
+
+    <!-- Pressure data -->
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/pressureIcon"
+        android:src="@drawable/pressure"
+        android:layout_below="@id/humidityIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressure"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/pressureIcon"
+        android:layout_alignTop="@id/pressureIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressureStat"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/pressure"
+        android:layout_alignBaseline="@id/pressure"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/visibilityIcon"
+        android:src="@drawable/eye"
+        android:layout_below="@id/pressureIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/visibility"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/visibilityIcon"
+        android:layout_alignTop="@id/visibilityIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/sunIcon"
+        android:src="@drawable/sun"
+        android:layout_below="@id/visibilityIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunrise"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/sunIcon"
+        android:layout_alignTop="@id/sunIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/moonIcon"
+        android:src="@drawable/moon"
+        android:layout_below="@id/sunIcon"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunset"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@id/moonIcon"
+        android:layout_alignTop="@id/moonIcon"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/tempMin"
+        android:layout_marginStart="10dp"/>
+
+
+</RelativeLayout>

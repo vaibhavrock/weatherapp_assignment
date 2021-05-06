@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="splash_name">Weather App</string>
+    <string name="large_text">We are providing highly recognisable weather products that make working with the weather data a way easier. We work with millions of developers around a clock and believe that these benefits might be suitable for most of applications, up to the complex enterprise systems. A spectrum of out-of-the box weather products Short-term and long-term forecasts, history and observation Any location on the globe Transparent pricing and licensing Our weather products are accessible via fast, reliable APIs that follow industry standards and compatible with different kind of enterprise systems. All our products content essential climate variables for any location. Besides that, we have some special products that helpful for industries that are affected by weather condition. Amongst them are Road Risk and national weather alerts.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help">Help</string>
+</resources>
